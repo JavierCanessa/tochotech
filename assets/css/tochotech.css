@@ -11380,7 +11380,7 @@ pre .code {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 60px;
+  max-width: 85px;
 }
 
 .social-icons .social-link {
@@ -11681,4 +11681,16 @@ pre .code {
   background: #F85C70;
   display: block;
   margin-top: 10px;
+}
+
+
+/* Toch */
+/* Estilo para elementos pares */
+.list li:nth-child(even) {
+  background-color: #c2c2c2; /* Fondo gris claro */
+}
+
+/* Estilo para elementos impares */
+.list li:nth-child(odd) {
+  background-color: #ffffff; /* Fondo blanco o transparente */
 }
