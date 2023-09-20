@@ -10685,7 +10685,7 @@ button.bg-dark:focus {
 }
 
 .text-center {
-  text-align: center !important;
+  text-align: justify !important;
 }
 
 @media (min-width: 576px) {
@@ -11134,6 +11134,10 @@ p {
 
 .price-card .list .list-item {
   margin: 12px 0;
+  padding: 10px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
 
 .price-card.price-card-requried {
