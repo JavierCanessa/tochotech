@@ -15,8 +15,13 @@
     <!-- font awesome icons -->
     <script src="https://kit.fontawesome.com/0e16b5c4cb.js" crossorigin="anonymous"></script>
     <!-- BootStrap v5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Asegúrate de que jQuery esté incluido en tu proyecto -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -354,100 +359,145 @@
             <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
             <div class="portfolio">
                 <div class="filters">
-                    <a href="#" data-filter=".unistudent" class="active" >Unistudent</a>
+                    <a href="#" data-filter=".unistudent" class="active">Unistudent</a>
                     <a href="#" data-filter=".myuni"> MyUni </a>
                     <a href="#" data-filter=".mivecino">MiVecino</a>
                     <a href="#" data-filter=""></a>
                 </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modalImagenes" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+
+
+                                <!-- Carousel de Imagen -->
+                                <div id="carouselExample" class="carousel slide">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="" class="d-block w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="portfolio-container">
-                        <div class="col-md-6 col-lg-4 unistudent">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent_logo.svg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent_logo.svg"></a>
-                                    <!-- <div class="text-holder">
-                                        <h6 class="title">WEB</h6>
-                                        <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                                    </div> -->
-                                </div>
+                    <div class="col-md-6 col-lg-4 unistudent">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent_logo.svg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <!-- Boton a modal -->
+                                <a data-bs-toggle="modal" data-bs-target="#modalImagenes">
+                                    Ver Imagen
+                                </a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 unistudent">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent1.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent1.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 unistudent">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent1.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <!-- Boton a modal -->
+                                <a data-bs-toggle="modal" data-bs-target="#modalImagenes">
+                                    Ver Imagen
+                                </a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 unistudent">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent2.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent2.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 unistudent">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent2.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent2.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 unistudent">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent3.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent3.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 unistudent">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent3.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent3.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 unistudent">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent4.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent4.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 unistudent">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent4.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent4.jpg"></a>
                             </div>
                         </div>
+                    </div>
 
                     <!-- Imagenes de MyUni -->
-                        <div class="col-md-6 col-lg-4 myuni">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent5.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent5.jpg"></a>
-                                </div>
+                    <div class="col-md-6 col-lg-4 myuni">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent5.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent5.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 myuni">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent6.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent6.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 myuni">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent6.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent6.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 myuni">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent7.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent7.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 myuni">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent7.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent7.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 myuni">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent8.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent8.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 myuni">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent8.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent8.jpg"></a>
                             </div>
                         </div>
-                        <!-- <div class="col-md-6 col-lg-4 myuni">
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-4 myuni">
                             <div class="portfolio-item">
                                 <img src="assets/imgs/imgsUnistudent/unistudent9.jpg" class="img-fluid"
                                     alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
@@ -456,16 +506,16 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="col-md-6 col-lg-4 myuni">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent10.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent10.jpg"></a>
-                                </div>
+                    <div class="col-md-6 col-lg-4 myuni">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent10.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent10.jpg"></a>
                             </div>
                         </div>
-                        <!-- <div class="col-md-6 col-lg-4 myuni">
+                    </div>
+                    <!-- <div class="col-md-6 col-lg-4 myuni">
                             <div class="portfolio-item">
                                 <img src="assets/imgs/imgsUnistudent/unistudent11.jpg" class="img-fluid"
                                     alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
@@ -474,90 +524,90 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="col-md-6 col-lg-4 myuni">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/imgsUnistudent/unistudent12.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent12.jpg"></a>
+                    <div class="col-md-6 col-lg-4 myuni">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/imgsUnistudent/unistudent12.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/imgsUnistudent/unistudent12.jpg"></a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Empieza Mi Vecino -->
-                        <div class="col-md-6 col-lg-4 mivecino">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/miVecino/elmercader01.svg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/miVecino/elmercader01.svg"></a>
-                                    <!-- <div class="text-holder">
+                    <div class="col-md-6 col-lg-4 mivecino">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/miVecino/elmercader01.svg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/miVecino/elmercader01.svg"></a>
+                                <!-- <div class="text-holder">
                                         <h6 class="title">WEB</h6>
                                         <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
                                     </div> -->
-                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mivecino">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/miVecino/mivecino1.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/miVecino/mivecino1.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mivecino">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/miVecino/mivecino1.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/miVecino/mivecino1.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mivecino">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/miVecino/mivecino2.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/miVecino/mivecino2.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mivecino">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/miVecino/mivecino2.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/miVecino/mivecino2.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mivecino">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/miVecino/mivecino3.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/miVecino/mivecino3.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mivecino">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/miVecino/mivecino3.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/miVecino/mivecino3.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mivecino">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/miVecino/mivecino4.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/miVecino/mivecino4.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mivecino">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/miVecino/mivecino4.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/miVecino/mivecino4.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mivecino">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/miVecino/mivecino5.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/miVecino/mivecino5.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mivecino">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/miVecino/mivecino5.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/miVecino/mivecino5.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mivecino">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/miVecino/mivecino6.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/miVecino/mivecino6.jpg"></a>
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mivecino">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/miVecino/mivecino6.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/miVecino/mivecino6.jpg"></a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 mivecino">
-                            <div class="portfolio-item">
-                                <img src="assets/imgs/miVecino/mivecino7.jpg" class="img-fluid"
-                                    alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                                <div class="content-holder">
-                                    <a class="img-popup" href="assets/imgs/miVecino/mivecino7.jpg"></a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mivecino">
+                        <div class="portfolio-item">
+                            <img src="assets/imgs/miVecino/mivecino7.jpg" class="img-fluid"
+                                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                            <div class="content-holder">
+                                <a class="img-popup" href="assets/imgs/miVecino/mivecino7.jpg"></a>
                             </div>
                         </div>
                     </div>
@@ -649,6 +699,23 @@
             </p>
         </div>
     </footer>
+
+    <!-- Agrega este script al final de tu página antes de cerrar el </body> -->
+    <script>
+        $(document).ready(function () {
+            // Manejar el clic en el enlace "Ver Imagen"
+            $('.content-holder a[data-bs-toggle="modal"]').click(function () {
+                // Obtener el src de la imagen dentro del contenedor actual
+                var imgSrc = $(this).closest('.portfolio-item').find('img').attr('src');
+
+                // Actualizar el src de la imagen en el modal
+                $('#modalImagenes .modal-body img').attr('src', imgSrc);
+
+                // Mostrar el modal
+                $('#modalImagenes').modal('show');
+            });
+        });
+    </script>
 
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
