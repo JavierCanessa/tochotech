@@ -53,7 +53,7 @@ $(window).on("load", function () {
 function initMap() {
   // Styles a map in night mode.
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 40.674, lng: -73.945 },
+    center: { lat: -34.61315, lng: -58.37723 },
     zoom: 12,
     scrollwheel: false,
     navigationControl: false,
@@ -140,22 +140,4 @@ function initMap() {
       }
     ]
   });
-}
-
-
-// Contacto Mail
-const $form = document.querySelector('#form')
-const $buttonMailTo = document.querySelector('#linkmail')
-$form.addEventListener('submit', handleSubmit)
-
-function handleSubmit(event) {
-  event.preventDefault()
-  const form = new FormData(this)
-  console.log(form.get('nombre'))
-
-  $buttonMailTo.setAttribute('href', `mailto:canessa93desarrollo@gmail.com?subject=Consulta desde la web tochotech
- 						&body=*Nombre de cliente: ${form.get('nombre')}  
-						*Email del cliente: ${form.get(`email`)}
-						%0A%0A CONSULTA:  ${form.get(`mensaje`).toString()}`)
-  $buttonMailTo.click()
 }
