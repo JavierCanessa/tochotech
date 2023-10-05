@@ -156,7 +156,7 @@ sup {
 }
 
 a {
-  color: #F85C70;
+  color: #000000;
   text-decoration: none;
   background-color: transparent;
 }
@@ -2767,8 +2767,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #F85C70;
-  border-color: #F85C70;
+  background-color: #0D6EFD;
+  border-color: #0D6EFD;
 }
 
 .btn-primary:hover {
@@ -3198,14 +3198,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-danger {
-  color: #F85C70;
-  border-color: #F85C70;
+  color: #0D6EFD;
+  border-color: #0D6EFD;
 }
 
 .btn-outline-danger:hover {
   color: #fff;
-  background-color: #F85C70;
-  border-color: #F85C70;
+  background-color: #0D6EFD;
+  border-color: #0D6EFD;
 }
 
 .btn-outline-danger:focus, .btn-outline-danger.focus {
@@ -10811,7 +10811,7 @@ a.text-warning:hover, a.text-warning:focus {
 }
 
 .text-danger {
-  color: #F85C70 !important;
+  color: #0D6EFD !important;
 }
 
 a.text-danger:hover, a.text-danger:focus {
@@ -11000,7 +11000,7 @@ p {
   display: block;
   width: 25px;
   height: 1.5px;
-  background-color: #F85C70;
+  background-color: #0D6EFDz;
 }
 
 .breadcrumb {
@@ -11147,7 +11147,7 @@ p {
   top: 10px;
   padding: 6px 10px;
   width: 100px;
-  background: #F85C70;
+  background: #0D6EFD;
   color: #fff;
   font-weight: 400;
   -webkit-transform: rotate(45deg);
@@ -11408,7 +11408,7 @@ pre .code {
 }
 
 .navbar .nav-link.active {
-  color: #F85C70 !important;
+  color: #0D6EFD !important;
 }
 
 .navbar .brand {
