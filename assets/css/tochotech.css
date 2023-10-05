@@ -11204,7 +11204,7 @@ p {
 
 .portfolio .filters a.active {
   opacity: 1;
-  background: #F85C70;
+  background: #0D6EFD;
   color: #fff;
 }
 
@@ -11676,7 +11676,7 @@ pre .code {
   content: '';
   width: 20px;
   height: 2px;
-  background: #F85C70;
+  background: #0D6EFD;
   display: block;
   margin-top: 10px;
 }
