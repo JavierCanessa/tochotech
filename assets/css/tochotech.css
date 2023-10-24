@@ -11392,7 +11392,6 @@ pre .code {
 .navbar {
   box-shadow: 0 1px 10px rgba(54, 54, 54, 0.18);
   -webkit-box-shadow: 0 1px 10px rgba(54, 54, 54, 0.18);
-  height: 125px;
 }
 
 .navbar .navbar-nav:first-child .nav-item:first-child .nav-link {
@@ -11419,19 +11418,19 @@ pre .code {
 .navbar .brand .brand-img {
   position: absolute;
   left: 50%;
-  top: 38%;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -weblit-transform: translate(-50%, -50%);
-  /* border: 10px solid white; */
+  border: 10px solid white;
   -webkit-transition: .5s !important;
   transition: .5s !important;
   -weblit-transition: .5s !important;
   z-index: 2;
-  /* box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13); */
-  width: 266px;
-  border-radius: 0%;
+  box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
+  width: 170px;
+  border-radius: 50%;
 }
 
 .navbar .brand .brand-txt {
